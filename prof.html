@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="web.css">
+    <title>Yiqun Ma's Portfolio | AI & Software Engineer</title>
+</head>
+<body>
+    <nav>
+        <div class="nav__content">
+            <div class="logo"><a href="#">Yiqun Ma (Edwin)</a></div>
+            <label for="check" class="checkbox">
+                <i class="ri-menu-line"></i>
+            </label>
+            <input type="checkbox" name="check" id="check">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#Education and Intern">Experiences</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id="home" class="section home-section">
+        <div class="section__container">
+            <div class="content">
+                <p class="subtitle">HELLO AND WELCOME</p>
+                <h1 class="home_title">
+                    I'm <span>Yiqun Ma<br>
+                </h1>
+                <p class="role">--AI & Software Engineer</p>
+                <!-- <p class="description">
+                    Hello and welcome to my portfolio! I am Yiqun Ma, an AI and software engineer with a passion for leveraging technology to solve real-world problems.
+                    With a background in Robotics from the University of Toronto, I specialize in creating innovative solutions that enhance efficiency and drive progress.
+                    Here, you'll find my experiences and projects, from AI models and machine learning algorithms to software applications and development tools.
+                    I invite you to explore my work and learn more about my journey in the ever-evolving world of technology.
+                    I'm glad you're here. Let's connect and create something extraordinary together.
+                </p> -->
+                <div class="action__btns">
+                    <button class="about-btn" id="resume-btn">Resume</button>
+                </div>
+                <script>
+                    document.getElementById('resume-btn').onclick = function() {
+                        window.location.href = 'assets/software_cv.pdf';
+                    };
+                </script>
+            </div>
+            <!-- <div class="image">
+                <img src="assets/pic.png" alt="profile">
+            </div> -->
+        </div>
+    </section>
+    <section id="about" class="section about-section">
+        <div class="about_background">
+            <div class="about_section__container">
+                <div class="image">
+                    <img class="meimg" src="assets/pic3.png" alt="profile">
+                </div>
+                
+                <!-- <div class="skills">
+                    <h2 class="section__title">Skills</h2>
+                    <div class="skills__content">
+                        <div class="skill">
+                            <i class="ri-code-s-slash-line"></i>
+                            <p>Python</p>
+                        </div>
+                        <div class="skill">
+                            <i class="ri-code-s-slash-line"></i>
+                            <p>C</p>
+                        </div>
+                        <div class="skill">
+                            <i class="ri-code-s-slash-line"></i>
+                            <p>HTML</p>
+                        </div>
+                        <div class="skill">
+                            <i class="ri-code-s-slash-line"></i>
+                            <p>CSS</p>
+                        </div>
+                        <div class="skill">
+                            <i class="ri-code-s-slash-line"></i>
+                            <p>SQL</p>
+                        </div>
+                        <div class="skill">
+                            <i class="ri-code-s-slash-line"></i>
+                            <p>Git</p>
+                        </div>
+                        <div class="skill">
+                            <i class="ri-code-s-slash-line"></i>
+                            <p>TensorFlow</p>
+                        </div>
+                        <div class="skill">
+                            <i class="ri-code-s-slash-line"></i>
+                            <p>PyTorch</p>
+                        </div>
+                        <div class="skill">
+                            <i class="ri-code-s-slash-line"></i>
+                            <p>OpenCV</p>
+                        </div>
+                        <div class="skill">
+                            <i class="ri-code-s-slash-line"></i>
+                            <p>ROS</p>
+                        </div>
+                        <div class="skill">
+                            <i class="ri-code-s-slash-line"></i>
+                            <p>Linux</p>
+                        </div>
+                        <div class="skill">
+                            <i class="ri-code-s-slash-line"></i>
+                            <p>Matlab</p>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="about_cotent">
+                    <h2 class="section__title">About Me</h2>
+                    <p class="about_description">
+                        I am a passionate AI and software engineer with a background in Robotics from the University of Toronto. 
+                    </p>
+                    <p class="about_description">
+                        I specialize in developing innovative solutions that leverage technology to solve real-world problems. 
+                    </p>
+                    <p class="about_description">
+                        Throughout my academic and intern journey, I have honed my skills in programming, AI, and data analysis.
+                    </p>
+                    <p class="about_description">
+                        I am excited to continue my journey in the boosting world of technology and create something extraordinary.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Education and Intern" class="section education-section">
+        <div class="education__container">
+            <h2 class="edu__title">Education and Intern</h2>
+            <div class="education__content">
+                
+                <div class="education">
+                    <h3 class="school">University of Toronto</h3>
+                    <p class="education__time">2020 - 2024+PEY</p>
+                    <p class="education__description">
+                        Bachelor of Applied Science in Engineering Science (Robotics Major)
+                    </p>
+                    <p class="exp__description">
+                        -- Relevant Courses: Machine Learning, Computer Vision, Robotics, Control Systems, Software Engineering, Data Structures, Algorithms.
+                    </p>
+                    <p class="exp__description">
+                        Completed multiple projects in AI, Robotics, and Software Development.
+                    </p>
+                </div>
+                <div class="intern">
+                    <h3 class="company">Radical X</h3>
+                    <p class="intern__time">May 2024 - Aug 2024</p>
+                    <p class="intern__description">
+                        AI Engineer Intern (remotely)
+                    </p>
+                    <p class="exp__description">
+                        -- Completed two personal projects using Gemini, Vertex AI and Google Cloud Platform.
+                        
+                        Developed and edited models code using NLP and LLM to improve the performance of the company's products.
+                    </p>
+                </div>
+                <div class="intern">
+                    <h3 class="company">BMW R&D center</h3>
+                    <p class="intern__time">May 2023 - May 2024</p>
+                    <p class="intern__description">
+                        Software Engineer Intern (SOTIF)
+                    </p>
+                    <p class="exp__description">
+                        -- Focused on the development of software tools for the SOTIF team including data analysis, image processing, and machine learning.
+                    </p>
+                    <p class="exp__description">
+                        Also designed an Autoencoder to o predict material corrosion, aligning with specific experimental settings.
+                    </p>
+                </div>
+                <div class="intern">
+                    <h3 class="company">SDCNlab, York University</h3>
+                    <p class="intern__time">July 2023 - now,  May 2022 - Dec 2023</p>
+                    <p class="intern__description">
+                        Research Intern
+                    </p>
+                    <p class="exp__description">
+                        -- Frist research period focused on analyzing naturalistic human driving data and training AV
+                        lane-change decisions.
+                    </p>
+                    <p class="exp__description">
+                        -- Second research period is working on ACC competition and researched in IRL, MPC, transfoermer and game theory.
+                    </p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="section contact-section">
+        <div class="contact__container">
+            <h2 class="contact__title">Contact</h2>
+            <div class="contact__content">
+                <div class="contact__info">
+                    <h3 class="contact__subtitle">Get in touch</h3>
+                    <p class="contact__description">
+                        I'm always open to new opportunities and collaborations. Feel free to reach out to me via email.
+                    </p>
+                    <div class="contact__btns">
+                        <a href="mailto:mayiqun.edwin@gmail.com " class="contact__btn">Contact Me</a>
+                    </div>
+                </div>
+                <div class="contact__description">
+                    I' also leave my email and github here.
+                    <div class="contact__info">
+                        <h3 class="email_and_github">mayiqun.edwin@gmail.com</h3>
+                        <h3 class="email_and_github">https://github.com/Creak777</h3>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+</html>

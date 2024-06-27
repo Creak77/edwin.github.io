@@ -1,0 +1,480 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+  --primary-color: black;
+  --primary-color-dark: rgb(234, 234, 234);
+  --secondary-color: #8ae0ae;
+  --text-dark: #ededed;
+  --text-light: #555555;
+  --extra-light: #000000;
+  --max-width: 1200px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--text-light);
+  background-color: var(--extra-light);
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #707070;
+  z-index: 99;
+  animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.nav__content {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+
+nav .logo a:hover {
+  color: var(--primary-color-dark);
+}
+
+nav .checkbox {
+  display: none;
+}
+
+nav input {
+  display: none;
+}
+
+nav .checkbox i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  transition: left 0.3s;
+}
+
+ul li {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: calc(0.3s * var(--i));
+}
+
+ul li a {
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: 0.3s;
+}
+
+ul li a:hover {
+  border-top-color: var(--secondary-color);
+  border-bottom-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.section {
+  background-color: var(--extra-light);
+}
+
+.section__container {
+  min-height: 100vh;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.about_section__container {
+  display: flex;
+  gap: 2rem;
+}
+
+.about_section__container > div {
+  flex: 1;
+}
+
+.education-section {
+  background-color: var(--extra-light);
+  padding: 2rem 0;
+}
+
+.education_section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.edu__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.education__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.education, .intern {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: calc(0.3s * var(--i));
+}
+
+.school, .company {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.education__time, .intern__time {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+.education__description, .intern__description {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+.exp__description {
+  font-size: 1rem;
+  color: rgb(0, 128, 92);
+  margin-bottom: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about_content {
+  display: flex;
+  flex-direction: column;
+}
+
+.subtitle {
+  letter-spacing: 2px;
+  color: var(--text-light);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.home_title {
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 2.5rem;
+  color: var(--text-dark);
+  margin-bottom: 2.5rem;
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+.role {
+  padding-left: 30px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  transform: translateX(40px);
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 0.6s;
+}
+
+.title span {
+  font-weight: 600;
+}
+
+.description {
+  line-height: 1.5rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 0.8s;
+}
+
+.about_description {
+  color: #b0adad;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  margin-bottom: 2rem;
+  transform: translateX(-100px);
+  transform: translateY(150px);
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.action__btns {
+  display: flex;
+  gap: 1rem;
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+.action__btns button {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 1rem 2rem;
+  outline: none;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.portfolio {
+  color: var(--primary-color);
+}
+
+.portfolio:hover {
+  background-color: var(--primary-color-dark);
+  color: #ffffff;
+}
+
+.image {
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.8s;
+}
+
+.image img {
+  width: min(25rem, 90%);
+  height: auto;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.image .meimg {
+  width: 80%;
+  height: auto;
+  transform: translateY(30px);
+}
+
+.image::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  pointer-events: none;
+}
+
+.skills {
+  margin-top: 0rem;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 1.6s;
+}
+
+.section__title {
+  font-size: 2rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  transform: translateX(-100px);
+  transform: translateY(150px);
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 0.8s;
+}
+
+.edu__title {
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  transform: translateX(450px);
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 1s;
+}
+
+.skills__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: var(--primary-color-dark);
+  color: var(--primary-color);
+  border-radius: 8px;
+  width: 80px;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 2.2s;
+}
+
+.skill i {
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.skill p {
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+.about_background {
+  background-color: rgb(29, 29, 29);
+  padding: 2rem;
+  position: relative;
+  width: 90%;
+}
+
+.contact__container {
+  background-color: var(--extra-light);
+  padding: 2rem;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.4s;
+}
+
+.contact__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact__title {
+  font-size: 2rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 0.6s;
+}
+
+.contact__description {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 0.8s;
+}
+
+.contact__info {
+  display: flex;
+  gap: 1rem;
+}
+
+.contact__btns {
+  font-weight: 300;
+  outline: none;
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.5s;
+}
+
+.email_and_github {
+  color: rgb(199, 197, 197);
+  background-color: #333;
+  font-size: 0.75rem;
+  transform: translateX(200px);
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.2s;
+}
+
+@media (min-width: 768px) {
+  .skills__content {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .skill {
+    flex: 1 1 calc(50% - 1rem);
+  }
+}
